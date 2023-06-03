@@ -4,6 +4,6 @@ import NotFound from './components/screens/not-found/NotFound.svelte';
 
 export const routes = {
 	'/': Home,
-	'/company/:name': Restaurant,
+	'/restaurant/:name': Restaurant,
 	'*': NotFound,
 };

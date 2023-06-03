@@ -14,6 +14,8 @@
 <style lang='scss'>
   .search {
     @apply overflow-hidden bg-[#F0F0F0] rounded-3xl py-2 px-3.5 flex flex-row;
+	  max-width: 600px;
+    margin: 0 auto;
 
     .icon {
       @apply w-8 mr-2 text-[#BCBCC1];
