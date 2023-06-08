@@ -43,7 +43,7 @@
     }
 
     input {
-      @apply bg-transparent text-[#222];
+      @apply bg-transparent text-[#222] w-full;
       outline: none;
       border: none;
 

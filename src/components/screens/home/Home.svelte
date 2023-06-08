@@ -10,7 +10,3 @@
 	<Catalog />
 	<a href='/company/soho' use:link>company</a>
 </div>
-
-<style lang='postcss'>
-
-</style>

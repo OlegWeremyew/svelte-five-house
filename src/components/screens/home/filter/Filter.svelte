@@ -1,11 +1,12 @@
 <script lang='ts'>
 	import FilterItem from './FilterItem/FilterItem.svelte';
-	import hamburger from '../../../../assets/filters/hamburger.svg';
-	import popcorn from '../../../../assets/filters/popcorn.svg';
-	import oldMicrophone from '../../../../assets/filters/old-microphone.svg';
-	import iceCream from '../../../../assets/filters/ice-cream.svg';
+	import hamburger from '@/assets/filters/hamburger.svg';
+	import popcorn from '@/assets/filters/popcorn.svg';
+	import oldMicrophone from '@/assets/filters/old-microphone.svg';
+	import iceCream from '@/assets/filters/ice-cream.svg';
+	import type { IFilter } from '@/components/screens/home/filter/filter.interface';
 
-	const filters = [
+	const filters:IFilter[] = [
 		{
 			name: 'Cafe',
 			icon: hamburger,
@@ -30,7 +31,7 @@
 </script>
 
 <div class='filters'>
-	{#each filters as filter}
+	{#each filters as filter (filter.name)}
 		<FilterItem {filter} />
 	{/each}
 </div>

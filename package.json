@@ -1,5 +1,8 @@
 {
   "name": "svelte-five-house",
+  "author": "Oleg Veremyev",
+  "description": "Search interesting cafe",
+  "keywords": ["Cafe", "Svwlte", "Tesat App"],
   "private": true,
   "version": "0.0.0",
   "type": "module",
