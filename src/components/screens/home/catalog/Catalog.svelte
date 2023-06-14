@@ -4,7 +4,7 @@
 	import kitchen1 from '@/assets/restaurants/kitchen1.png';
 	import kitchen2 from '@/assets/restaurants/kitchen2.png';
 	import kitchen3 from '@/assets/restaurants/kitchen3.png';
-	import { searchTerm } from '@/store/store';
+	import { currentFilter, searchTerm } from '@/store/store';
 
 	const initialRestaurants: IRestaurant[] = [
 		{
@@ -15,6 +15,7 @@
 			rating: 4.7,
 			destination: 1,
 			img: kitchen1,
+			filter: ['Cafe', 'Stand-up']
 		},
 		{
 			slug: 'vegan-cafe',
@@ -24,6 +25,7 @@
 			rating: 4.2,
 			destination: 2.1,
 			img: kitchen2,
+			filter: ['Cinema']
 		},
 		{
 			slug: 'arizona',
@@ -33,6 +35,7 @@
 			rating: 4.2,
 			destination: 2.1,
 			img: kitchen3,
+			filter: ['Cafe', 'Stand-up', 'Ice cream']
 		},
 	];
 
@@ -41,6 +44,13 @@
 	$:if ($searchTerm) {
 		filteredRestaurants = initialRestaurants
 			.filter(({ name }) => name.toLowerCase().includes($searchTerm.toLowerCase()));
+	} else {
+		filteredRestaurants = initialRestaurants
+	}
+
+	$:if ($currentFilter) {
+		filteredRestaurants = initialRestaurants
+			.filter(({ filter }) => filter.flat().includes($currentFilter));
 	} else {
 		filteredRestaurants = initialRestaurants
 	}

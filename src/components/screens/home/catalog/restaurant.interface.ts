@@ -1,3 +1,5 @@
+import { CurrentFilterType } from '@/store/store.types';
+
 export interface IRestaurant {
 	slug: string;
 	name: string;
@@ -6,4 +8,5 @@ export interface IRestaurant {
 	rating: number;
 	destination: number;
 	img: string;
+	filter: CurrentFilterType[]
 }
